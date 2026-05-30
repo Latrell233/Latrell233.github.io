@@ -43,7 +43,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto h-full px-4 md:px-6 flex items-center justify-between">
         {/* Logo / Name */}
         <Link href="/" className="font-semibold text-lg tracking-tight">
-          Latrell‘s Portfolio
+          Chensen's Lab.
         </Link>
 
         {/* Desktop Navigation */}

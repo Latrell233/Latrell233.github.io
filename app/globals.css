@@ -6,24 +6,24 @@
 
 /* Light Theme - 基于文档色彩系统 */
 :root {
-  --background: #FFFFFF;
+  --background: #fffbef;
   --foreground: #1F2937;
-  --card: #F3F4F6;
+  --card: #FFFFFF;
   --card-foreground: #1F2937;
   --popover: #FFFFFF;
   --popover-foreground: #1F2937;
   --primary: #0066CC;
   --primary-foreground: #FFFFFF;
-  --secondary: #F3F4F6;
+  --secondary: #F5F1EA;
   --secondary-foreground: #1F2937;
-  --muted: #F3F4F6;
-  --muted-foreground: #6B7280;
+  --muted: #F5F1EA;
+  --muted-foreground: #5A6270;
   --accent: #0052A3;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #E5E7EB;
-  --input: #E5E7EB;
+  --border: #E8E4DC;
+  --input: #E8E4DC;
   --ring: #0066CC;
   --radius: 0.5rem;
   

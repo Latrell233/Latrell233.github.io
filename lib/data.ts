@@ -85,7 +85,7 @@ export const projects: Project[] = [
 ]
 
 export const profile = {
-  name: '澄森 Latrell',
+  name: '澄森 Chengsen',
   tagline: 'Solo Builder',
   bio: 'Developer/Designer/Builder\n写代码、写文章、做产品。使技术切实服务于人',
   currentWork: '正在构建 《财富自由之路》',
@@ -96,6 +96,6 @@ export const profile = {
   social: {
     github: 'https://github.com/Latrell233',
     twitter: 'https://x.com/Latrell233',
-    email: 'leiwencheng@163.com',
+    email: 'Latrell233@qq.com',
   },
 }

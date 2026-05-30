@@ -8,7 +8,7 @@ export function Writing() {
   // 如果没有文章，显示提示
   if (articles.length === 0) {
     return (
-      <section id="writing" className="py-16 md:py-24 px-4 bg-muted/30">
+      <section id="writing" className="py-16 md:py-24 px-4 bg-muted">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">
             Writing <span className="text-muted-foreground font-normal">/ 文章</span>
@@ -22,7 +22,7 @@ export function Writing() {
   }
 
   return (
-    <section id="writing" className="py-16 md:py-24 px-4 bg-muted/30">
+    <section id="writing" className="py-16 md:py-24 px-4 bg-muted">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">
           Writing <span className="text-muted-foreground font-normal">/ 文章</span>

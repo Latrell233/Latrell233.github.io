@@ -7,10 +7,10 @@ export function Hero() {
     <section>
       {/* Top Banner — full-width, gradient fade at bottom */}
       <div className="relative w-full h-48 sm:h-56 md:h-72 overflow-hidden bg-muted">
-        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-          横幅图片区域
-        </div>
-        { <Image src="/banner.png" alt="Banner" fill className="object-cover" priority /> }
+        {/* Light mode banner */}
+        <Image src="/Banner_light.png" alt="Banner" fill className="object-cover dark:hidden" priority />
+        {/* Dark mode banner */}
+        <Image src="/Banner_dark.png" alt="Banner" fill className="object-cover hidden dark:block" priority />
 
         {/* Gradient fade to background */}
         <div className="absolute inset-x-0 bottom-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent" />
@@ -21,7 +21,7 @@ export function Hero() {
         <div className="flex items-start md:items-end gap-4 md:gap-8">
           {/* Avatar — right side on desktop (order-2) */}
           <div className="shrink-0 md:order-2">
-            <div className="relative w-24 h-24 md:w-48 md:h-48 rounded-full bg-muted border-[3px] border-background overflow-hidden shadow-lg">
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-muted border-[3px] border-background overflow-hidden shadow-lg">
               <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-xs md:text-sm">
                 头像
               </div>

@@ -20,18 +20,18 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: '澄森 Latrell | Solo Builder',
+  title: '澄森 Chensen | Solo Builder',
   description: '独立建设者 — 写代码、写文章、做产品',
   keywords: ['Solo Builder', '独立开发者', 'Developer', 'Builder'],
-  authors: [{ name: '澄森 Latrell' }],
+  authors: [{ name: '澄森 Chensen' }],
   openGraph: {
-    title: '澄森 Latrell | Solo Builder',
+    title: '澄森 Chensen | Solo Builder',
     description: '独立建设者 — 写代码、写文章、做产品',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '澄森 Latrell | Solo Builder',
+    title: '澄森 Chensen | Solo Builder',
     description: '独立建设者 — 写代码、写文章、做产品',
   },
 }

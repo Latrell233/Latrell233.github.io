@@ -19,7 +19,7 @@ export function Newsletter() {
   }
 
   return (
-    <section className="py-8 px-4">
+    <section className="py-16 md:py-24 px-4">
       <div className="max-w-xl mx-auto">
         <div className="flex flex-col items-center text-center gap-4 p-6 sm:p-8 bg-card border border-border rounded-2xl">
           {/* Icon */}

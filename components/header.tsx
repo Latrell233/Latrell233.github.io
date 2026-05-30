@@ -43,7 +43,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto h-full px-4 md:px-6 flex items-center justify-between">
         {/* Logo / Name */}
         <Link href="/" className="font-semibold text-lg tracking-tight">
-          Chensen's Lab.
+          Chengsen's Lab.
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,24 +73,28 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Buttons */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-2 md:hidden relative z-10">
           <button
+            type="button"
             onClick={toggleTheme}
-            className="p-2 rounded-md bg-background/20 backdrop-blur-sm hover:bg-muted transition-colors"
+            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation"
             aria-label="切换主题"
+            style={{ minWidth: 44, minHeight: 44 }}
           >
             {!mounted ? (
-              <Moon className="h-4 w-4" />
+              <Moon className="h-5 w-5" />
             ) : theme === 'dark' ? (
-              <Sun className="h-4 w-4" />
+              <Sun className="h-5 w-5" />
             ) : (
-              <Moon className="h-4 w-4" />
+              <Moon className="h-5 w-5" />
             )}
           </button>
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-md bg-background/20 backdrop-blur-sm hover:bg-muted transition-colors"
+            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation"
             aria-label="菜单"
+            style={{ minWidth: 44, minHeight: 44 }}
           >
             {isMobileMenuOpen ? (
               <X className="h-5 w-5" />

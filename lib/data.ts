@@ -87,7 +87,7 @@ export const projects: Project[] = [
 export const profile = {
   name: '澄森 Chengsen',
   tagline: 'Solo Builder',
-  bio: 'Developer/Designer/Builder\n写代码、写文章、做产品。使技术切实服务于人。',
+  bio: 'Developer/Designer/Builder\n写代码、写文章、做产品',
   currentWork: '正在构建 《财富自由之路》',
   currentReading: '《The Psychology of Money》',
   philosophy: 'Never lose the control of your life.',

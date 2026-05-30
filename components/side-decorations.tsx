@@ -39,7 +39,7 @@ export function SideDecorations() {
           style={{ 
             top: `${250 + scrollY * 0.05}px`,
             transform: `rotate(${scrollY * 0.02}deg)`,
-            opacity: 0.3
+            opacity: 0.5
           }}
         />
         <div 
@@ -47,7 +47,7 @@ export function SideDecorations() {
           style={{ 
             top: `${650 + scrollY * 0.03}px`,
             transform: `rotate(${45 + scrollY * 0.015}deg)`,
-            opacity: 0.4
+            opacity: 0.6
           }}
         />
       </div>
@@ -76,7 +76,7 @@ export function SideDecorations() {
           className="absolute right-6 md:right-10 w-8 h-8 border border-border/30 rounded-full"
           style={{ 
             top: `${300 + scrollY * 0.04}px`,
-            opacity: 0.25
+            opacity: 0.4
           }}
         />
         <div 
@@ -84,14 +84,14 @@ export function SideDecorations() {
           style={{ 
             top: `${700 + scrollY * 0.02}px`,
             transform: `rotate(${-scrollY * 0.02}deg)`,
-            opacity: 0.5
+            opacity: 0.6
           }}
         />
       </div>
 
       {/* Background Gradient Orbs */}
       <div 
-        className="absolute w-96 h-96 rounded-full blur-3xl opacity-[0.03]"
+        className="absolute w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
         style={{
           background: 'radial-gradient(circle, var(--primary) 0%, transparent 70%)',
           left: '-10%',
@@ -99,7 +99,7 @@ export function SideDecorations() {
         }}
       />
       <div 
-        className="absolute w-80 h-80 rounded-full blur-3xl opacity-[0.03]"
+        className="absolute w-80 h-80 rounded-full blur-3xl opacity-[0.06]"
         style={{
           background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)',
           right: '-5%',

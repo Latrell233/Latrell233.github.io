@@ -18,7 +18,7 @@ export function Hero() {
 
       {/* Info Section — shifted up so avatar overlaps banner, text aligns at same level */}
       <div className="max-w-5xl mx-auto px-4 pb-12 -mt-12 md:-mt-14 relative z-10">
-        <div className="flex items-start md:items-end gap-4 md:gap-8">
+        <div className="flex flex-col items-center md:flex-row md:items-end gap-6 md:gap-8">
           {/* Avatar — right side on desktop (order-2) */}
           <div className="shrink-0 md:order-2">
             <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-muted border-[3px] border-background overflow-hidden shadow-lg">
@@ -30,16 +30,16 @@ export function Hero() {
           </div>
 
           {/* Text — left on desktop (order-1) */}
-          <div className="flex-1 space-y-3 md:order-1 md:pb-4 min-w-0">
-            <h1 className="text-2xl md:text-5xl font-bold tracking-tight">
+          <div className="flex-1 space-y-3 md:order-1 md:pb-4 min-w-0 text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
               {profile.name}
             </h1>
-            <p className="text-sm md:text-xl text-muted-foreground max-w-lg">
+            <p className="text-sm md:text-xl text-muted-foreground max-w-lg mx-auto md:mx-0">
               {profile.tagline} — {profile.bio}
             </p>
 
             {/* Dynamic Status */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <span className="inline-block w-2 h-2 rounded-full bg-status-released animate-pulse" />
                 {profile.currentWork}
@@ -49,7 +49,7 @@ export function Hero() {
             </div>
 
             {/* CTAs — horizontal row, compact on mobile */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
               <a
                 href="#products"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"

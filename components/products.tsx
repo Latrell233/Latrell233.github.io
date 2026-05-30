@@ -35,13 +35,13 @@ function ProductCard({ project }: { project: Project }) {
   return (
     <article
       className={cn(
-        'group relative bg-card rounded-xl overflow-hidden border border-border',
+        'group relative bg-white/60 dark:bg-white/[0.06] backdrop-blur-xl rounded-xl overflow-hidden border border-white/50 dark:border-white/[0.08]',
         'transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/30',
         isMain && 'md:col-span-2'
       )}
     >
       {/* Image */}
-      <div className={cn('relative overflow-hidden', isMain ? 'h-48 md:h-56' : 'h-40')}>
+      <div className={cn('relative overflow-hidden -mb-px', isMain ? 'h-48 md:h-56' : 'h-40')}>
         <Image
           src={project.image || '/placeholder.svg?height=200&width=300'}
           alt={project.title}
@@ -49,7 +49,7 @@ function ProductCard({ project }: { project: Project }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/85 dark:from-[#1A1A1A]/85 to-transparent" />
         
         {/* Status Badge */}
         <div className="absolute top-3 right-3">

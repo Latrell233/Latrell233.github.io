@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Menu, X, Sun, Moon } from 'lucide-react'
@@ -23,18 +23,27 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+  const toggleTheme = useCallback(() => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+  }, [theme, setTheme])
+
+  const toggleMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev)
+  }, [])
+
+  const closeMenu = useCallback(() => {
+    setIsMobileMenuOpen(false)
+  }, [])
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-50 h-16 transition-colors duration-300',
         isScrolled
           ? 'bg-background/85 backdrop-blur-md border-b border-border'
           : 'bg-transparent'
@@ -42,7 +51,7 @@ export function Header() {
     >
       <div className="max-w-6xl mx-auto h-full px-4 md:px-6 flex items-center justify-between">
         {/* Logo / Name */}
-        <Link href="/" className="font-semibold text-lg tracking-tight">
+        <Link href="/" className="font-semibold text-lg tracking-tight shrink-0">
           Chengsen's Lab.
         </Link>
 
@@ -57,9 +66,10 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          
+
           {/* Theme Toggle */}
           <button
+            type="button"
             onClick={toggleTheme}
             className="p-2 rounded-md hover:bg-muted transition-colors"
             aria-label="切换主题"
@@ -73,13 +83,17 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Buttons */}
-        <div className="flex items-center gap-2 md:hidden relative z-10">
+        <div className="flex items-center gap-2 md:hidden shrink-0" style={{ zIndex: 60 }}>
           <button
             type="button"
-            onClick={toggleTheme}
-            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation"
+            onPointerDown={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              toggleTheme()
+            }}
+            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation select-none"
             aria-label="切换主题"
-            style={{ minWidth: 44, minHeight: 44 }}
+            style={{ minWidth: 44, minHeight: 44, pointerEvents: 'auto', touchAction: 'manipulation' }}
           >
             {!mounted ? (
               <Moon className="h-5 w-5" />
@@ -91,10 +105,14 @@ export function Header() {
           </button>
           <button
             type="button"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation"
+            onPointerDown={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              toggleMenu()
+            }}
+            className="p-2.5 rounded-lg bg-background/30 hover:bg-muted transition-colors touch-manipulation select-none"
             aria-label="菜单"
-            style={{ minWidth: 44, minHeight: 44 }}
+            style={{ minWidth: 44, minHeight: 44, pointerEvents: 'auto', touchAction: 'manipulation' }}
           >
             {isMobileMenuOpen ? (
               <X className="h-5 w-5" />
@@ -113,7 +131,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMenu}
                 className="py-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}

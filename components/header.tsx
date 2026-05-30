@@ -72,22 +72,24 @@ export function Header() {
           </button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden">
+        {/* Mobile Menu Buttons */}
+        <div className="flex items-center gap-1 md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md hover:bg-muted transition-colors"
+            className="p-2 rounded-md bg-background/20 backdrop-blur-sm hover:bg-muted transition-colors"
             aria-label="切换主题"
           >
-            {mounted && (theme === 'dark' ? (
+            {!mounted ? (
+              <Moon className="h-4 w-4" />
+            ) : theme === 'dark' ? (
               <Sun className="h-4 w-4" />
             ) : (
               <Moon className="h-4 w-4" />
-            ))}
+            )}
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-md hover:bg-muted transition-colors"
+            className="p-2 rounded-md bg-background/20 backdrop-blur-sm hover:bg-muted transition-colors"
             aria-label="菜单"
           >
             {isMobileMenuOpen ? (

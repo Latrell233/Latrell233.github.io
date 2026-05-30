@@ -35,7 +35,7 @@ function ProductCard({ project }: { project: Project }) {
   return (
     <article
       className={cn(
-        'group relative bg-white/60 dark:bg-white/[0.06] backdrop-blur-xl rounded-xl overflow-hidden border border-white/50 dark:border-white/[0.08]',
+        'group relative bg-white/90 dark:bg-card rounded-xl overflow-hidden border border-border/60 dark:border-border shadow-sm',
         'transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/30',
         isMain && 'md:col-span-2'
       )}

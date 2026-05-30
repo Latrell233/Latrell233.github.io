@@ -6,11 +6,11 @@ export function Hero() {
   return (
     <section>
       {/* Top Banner — full-width, gradient fade at bottom */}
-      <div className="relative w-full h-48 sm:h-56 md:h-72 overflow-hidden bg-muted">
+      <div className="relative w-full h-72 sm:h-64 md:h-80 overflow-hidden bg-muted">
         {/* Light mode banner */}
-        <Image src="/Banner_light.png" alt="Banner" fill className="object-cover dark:hidden" priority />
+        <Image src="/Banner_light.png" alt="Banner" fill className="object-cover md:object-cover dark:hidden" priority />
         {/* Dark mode banner */}
-        <Image src="/Banner_dark.png" alt="Banner" fill className="object-cover hidden dark:block" priority />
+        <Image src="/Banner_dark.png" alt="Banner" fill className="object-cover md:object-cover hidden dark:block" priority />
 
         {/* Gradient fade to background */}
         <div className="absolute inset-x-0 bottom-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent" />
@@ -31,21 +31,17 @@ export function Hero() {
 
           {/* Text — left on desktop (order-1) */}
           <div className="flex-1 space-y-3 md:order-1 md:pb-4 min-w-0 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">
               {profile.name}
             </h1>
-            <p className="text-sm md:text-xl text-muted-foreground max-w-lg mx-auto md:mx-0">
+            <p className="text-sm md:text-xl text-muted-foreground max-w-lg mx-auto md:mx-0 whitespace-pre-line">
               {profile.tagline} — {profile.bio}
             </p>
 
             {/* Dynamic Status */}
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 rounded-full bg-status-released animate-pulse" />
-                {profile.currentWork}
-              </span>
-              <span className="hidden sm:inline">·</span>
-              <span>在读：{profile.currentReading}</span>
+            <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
+              <span className="inline-block w-2 h-2 rounded-full bg-status-released animate-pulse" />
+              {profile.currentWork}
             </div>
 
             {/* CTAs — horizontal row, compact on mobile */}

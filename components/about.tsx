@@ -56,7 +56,7 @@ export function About() {
                   href={profile.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-white/60 dark:bg-white/[0.08] backdrop-blur-sm border border-white/50 dark:border-white/[0.08] text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+                  className="p-3 rounded-lg bg-white/80 dark:bg-card backdrop-blur-sm border border-border/60 dark:border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
@@ -65,14 +65,14 @@ export function About() {
                   href={profile.social.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-white/60 dark:bg-white/[0.08] backdrop-blur-sm border border-white/50 dark:border-white/[0.08] text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+                  className="p-3 rounded-lg bg-white/80 dark:bg-card backdrop-blur-sm border border-border/60 dark:border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
                   aria-label="Twitter / X"
                 >
                   <Twitter className="h-5 w-5" />
                 </a>
                 <a
                   href={`mailto:${profile.social.email}`}
-                  className="p-3 rounded-lg bg-white/60 dark:bg-white/[0.08] backdrop-blur-sm border border-white/50 dark:border-white/[0.08] text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+                  className="p-3 rounded-lg bg-white/80 dark:bg-card backdrop-blur-sm border border-border/60 dark:border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="h-5 w-5" />

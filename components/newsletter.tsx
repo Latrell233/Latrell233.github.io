@@ -21,7 +21,7 @@ export function Newsletter() {
   return (
     <section className="py-16 md:py-24 px-4">
       <div className="max-w-xl mx-auto">
-        <div className="flex flex-col items-center text-center gap-4 p-6 sm:p-8 bg-white/60 dark:bg-white/[0.06] backdrop-blur-xl border border-white/50 dark:border-white/[0.08] rounded-2xl">
+        <div className="flex flex-col items-center text-center gap-4 p-6 sm:p-8 bg-white/80 dark:bg-card backdrop-blur-md border border-border/60 dark:border-border rounded-2xl">
           {/* Icon */}
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
             <Mail className="h-6 w-6 text-primary" />

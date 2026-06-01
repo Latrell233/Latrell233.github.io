@@ -3,7 +3,7 @@ title: 面对真实：从校园到职场的心态重塑
 date: 2025-04-19
 tags:
   - 随笔
-  - "#思想"
+  - 思想
 summary: graduate reflection
 ---
 # 面对真实：从校园到职场的心态重塑
